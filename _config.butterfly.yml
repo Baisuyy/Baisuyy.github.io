@@ -19,16 +19,21 @@ menu:
 menu_settings:
   animation: true
 
-# Favicon
+# Favicon - 使用上传的图片
 favicon:
-  small: /images/favicon-16x16.png
-  medium: /images/favicon-32x32.png
-  apple_touch_icon: /images/apple-touch-icon.png
-  safari_pinned_tab: /images/logo.svg
+  small: /images/favicon.png
+  medium: /images/favicon.png
+  apple_touch_icon: /images/favicon.png
+  safari_pinned_tab: /images/favicon.png
   android_manifest: /images/manifest.json
 
+# Avatar - 使用上传的图片
+avatar:
+  img: /images/avatar.png
+  effect: true
+
 # Default cover
-default_cover: /images/default-cover.jpg
+default_cover: /images/avatar.png
 
 # Code
 highlight_theme: one-dark
@@ -133,10 +138,9 @@ font:
 cdn:
   enable: true
 
-# Inject scripts
-scripts:
-  - /js/custom.js
-
-# Custom CSS
+# Custom CSS/JS
 css:
   - /css/custom.css
+
+scripts:
+  - /js/custom.js
