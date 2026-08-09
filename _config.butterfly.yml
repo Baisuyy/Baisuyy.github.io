@@ -19,13 +19,8 @@ menu:
 menu_settings:
   animation: true
 
-# Favicon - 使用上传的图片作为 favicon
-favicon:
-  small: /images/favicon.png
-  medium: /images/favicon.png
-  apple_touch_icon: /images/favicon.png
-  safari_pinned_tab: /images/favicon.png
-  android_manifest: /images/manifest.json
+# Favicon - 修复为字符串格式
+favicon: /images/favicon.png
 
 # Avatar - 使用上传的图片
 avatar:
