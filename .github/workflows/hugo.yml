@@ -33,12 +33,30 @@ jobs:
       - name: Build
         run: hugo --minify --gc
 
+      - name: Debug public directory
+        run: |
+          echo "=== pwd ==="
+          pwd
+          echo "=== ls -la ==="
+          ls -la
+          echo "=== public dir ==="
+          ls -la public/
+          echo "=== public size ==="
+          du -sh public/
+          echo "=== find public ==="
+          find public -type f | head -20
+
       - name: Create artifact manually
         run: |
           cd public
+          echo "=== in public dir ==="
+          pwd
+          ls -la
           tar -czf ../site.tar.gz .
-          echo "Artifact size: $(du -h ../site.tar.gz)"
-          echo "Files in tar: $(tar -tzf ../site.tar.gz | wc -l)"
+          echo "=== tar size ==="
+          du -h ../site.tar.gz
+          echo "=== tar contents ==="
+          tar -tzf ../site.tar.gz
 
       - name: Upload Pages artifact
         uses: actions/upload-artifact@v4
