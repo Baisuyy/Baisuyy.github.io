@@ -19,7 +19,7 @@ menu:
 menu_settings:
   animation: true
 
-# Favicon - 使用上传的图片
+# Favicon - 使用上传的图片作为 favicon
 favicon:
   small: /images/favicon.png
   medium: /images/favicon.png
