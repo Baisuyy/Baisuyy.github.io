@@ -19,7 +19,7 @@ menu:
 menu_settings:
   animation: true
 
-# Favicon - 修复为字符串格式
+# Favicon - 简化配置，直接使用字符串路径
 favicon: /images/favicon.png
 
 # Avatar - 使用上传的图片
