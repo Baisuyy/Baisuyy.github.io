@@ -1,0 +1,142 @@
+# ----------------------------------------
+# Butterfly Theme Configuration
+# ----------------------------------------
+
+# Inject
+inject:
+  head:
+  bottom:
+
+# Menu
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  分类: /categories/ || fas fa-folder
+  标签: /tags/ || fas fa-tags
+  关于: /about/ || fas fa-user
+
+# Enable/Disable menu shift animation
+menu_settings:
+  animation: true
+
+# Favicon
+favicon:
+  small: /images/favicon-16x16.png
+  medium: /images/favicon-32x32.png
+  apple_touch_icon: /images/apple-touch-icon.png
+  safari_pinned_tab: /images/logo.svg
+  android_manifest: /images/manifest.json
+
+# Default cover
+default_cover: /images/default-cover.jpg
+
+# Code
+highlight_theme: one-dark
+
+# Social
+social:
+  GitHub: https://github.com/Baisuyy || fab fa-github
+  Email: mailto:your@email.com || fas fa-envelope
+
+# Search
+search:
+  enable: true
+  service: hexo-generator-search
+  preload: true
+
+# Pagination
+pagination:
+  enable: true
+  per_page: 10
+
+# Related posts
+related_posts:
+  enable: true
+  limit: 6
+  dateType: created
+
+# Math
+math:
+  enable: false
+
+# Disqus
+disqus:
+  enable: false
+
+# Waline
+waline:
+  enable: false
+
+# Analytics
+busuanzi:
+  enable: true
+
+# Share
+addthis:
+  enable: false
+
+# Dark mode
+darkmode:
+  enable: true
+  button: true
+
+# Reading progress
+reading_progress:
+  enable: true
+  color: '#37c6c0'
+  height: 2px
+
+# Back to top
+back2top:
+  enable: true
+
+# Scrollbar
+scrollbar:
+  enable: true
+
+# Lightbox
+lightbox:
+  enable: true
+
+# Medium zoom
+medium_zoom:
+  enable: true
+
+# Lazyload
+lazyload:
+  enable: true
+  field: site
+  placeholder:
+  blur: false
+
+# Pjax
+pjax:
+  enable: true
+
+# Font
+font:
+  global:
+    external: true
+    family: Noto Serif SC
+    size: 16px
+  title:
+    external: true
+    family: Ma Shan Zheng
+  logo:
+    external: true
+    family: Ma Shan Zheng
+  code:
+    external: true
+    family: JetBrains Mono
+
+# CDN
+cdn:
+  enable: true
+
+# Inject scripts
+scripts:
+  - /js/custom.js
+
+# Custom CSS
+css:
+  - /css/custom.css

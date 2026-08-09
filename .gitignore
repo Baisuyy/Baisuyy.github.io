@@ -1,6 +1,9 @@
-# Hugo
-/public/
-/resources/_gen/
+# Dependencies
+node_modules/
+
+# Build
+public/
+db.json
 
 # IDE
 .idea/
@@ -11,3 +14,14 @@
 # OS
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Testing
+coverage/
+
+# Misc
+*.tgz
+.cache/
