@@ -33,33 +33,16 @@ jobs:
       - name: Build
         run: hugo --minify --gc
 
-      - name: Debug public directory
+      - name: Verify public directory
         run: |
-          echo "=== public size ==="
+          echo "=== public directory ==="
           du -sh public/
-          echo "=== file sizes ==="
-          find public -type f -exec ls -lh {} \;
-
-      - name: Create artifact manually
-        run: |
-          cd public
-          echo "=== in public dir ==="
-          pwd
-          echo "=== file sizes in public ==="
-          find . -type f -exec ls -lh {} \;
-          echo "=== creating tar with verbose ==="
-          tar -czvf ../site.tar.gz .
-          echo "=== tar size ==="
-          du -h ../site.tar.gz
-          echo "=== tar contents with sizes ==="
-          tar -tvzf ../site.tar.gz
+          find public -type f | wc -l
 
       - name: Upload Pages artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
-          path: site.tar.gz
-          retention-days: 1
+          path: public
 
   deploy:
     environment:
@@ -71,5 +54,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages
